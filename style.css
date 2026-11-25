@@ -107,3 +107,6 @@ h2 {
 .music-controls button {
     margin: 5px;
 }
+.hidden {
+    display: none !important;
+}
