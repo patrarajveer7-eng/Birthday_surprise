@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -9,148 +10,100 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    background: linear-gradient(135deg, #ffe0ec, #e6d6ff, #d6f0ff);
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ffd6e7, #e6d6ff, #d6efff);
+    padding: 20px;
 }
 
-.birthday-card {
-    text-align: center;
-    padding: 50px 30px;
-    width: 90%;
+.card {
+    background: rgba(255, 255, 255, 0.9);
+    width: 100%;
     max-width: 500px;
-    background: rgba(255, 255, 255, 0.75);
+    padding: 40px 25px;
     border-radius: 25px;
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-}
-
-.small-text {
-    color: #888;
-    margin-bottom: 15px;
-    letter-spacing: 2px;
+    text-align: center;
+    box-shadow: 0 12px 35px rgba(120, 80, 130, 0.2);
+    animation: appear 0.8s ease;
 }
 
 h1 {
-    color: #d65a91;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
+    color: #e75480;
+    margin-bottom: 20px;
+    font-size: 30px;
 }
 
-.subtitle {
+p {
     color: #666;
-    margin-bottom: 30px;
-    font-size: 1.1rem;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
 }
 
 button {
-    padding: 14px 25px;
-    border: none;
-    border-radius: 30px;
-    background: #d65a91;
+    background: #ff70a6;
     color: white;
-    font-size: 1rem;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 30px;
+    font-size: 16px;
     cursor: pointer;
     transition: 0.3s;
+    margin-top: 15px;
 }
 
 button:hover {
+    background: #ed4f8b;
     transform: scale(1.05);
-    background: #c44780;
-}
-#message{
-    margin-top: 30px;
-    padding: 25px;
-    background: #fff0f7;
-    border: 2px solid #ffc5df;
-    border-radius: 20px;
-    animation: popIn 0.7s ease;
 }
 
-#message[hidden] {
-    display: none !important;
+.hidden {
+    display: none;
 }
 
-.surprise-message h2 {
-    color: #d65a91;
-    font-size: 1.5rem;
-    margin-bottom: 15px;
+.cat {
+    display: block;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
+    margin: 25px auto;
 }
 
-.surprise-message p {
-    color: #777;
-    line-height: 1.7;
+h2 {
+    color: #e75480;
+    margin: 20px 0;
 }
 
-.signature {
-    margin-top: 15px;
-    font-weight: bold;
-}
-
-.dancing-cat {
-    font-size: 75px;
-    display: inline-block;
-    animation: catJump 0.7s infinite alternate ease-in-out;
-}
-
-@keyframes catJump {
-    from {
-        transform: translateY(0) rotate(-8deg);
-    }
-
-    to {
-        transform: translateY(-18px) rotate(8deg);
-    }
-}
-
-@keyframes popIn {
+@keyframes appear {
     from {
         opacity: 0;
-        transform: scale(0.7);
+        transform: translateY(20px);
     }
-
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
 }
-.surprise-message[hidden] {
-    display: none !important;
+.birthday-cat {
+    width: 160px;
+    height: 160px;
+    object-fit: contain;
+    display: block;
+    margin: 15px auto;
 }
-#message[hidden] {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-#message:not([hidden]) {
-    display: block !important;
-    visibility: visible !important;
-}
-body::before {
-    content: "♥  ✦  ♥  ✧  ♥";
-    position: fixed;
-    top: 8%;
-    left: 5%;
-    color: rgba(214, 90, 145, 0.25);
-    font-size: 30px;
-    letter-spacing: 15px;
-    pointer-events: none;
+.music-controls {
+    margin-bottom: 25px;
 }
 
-body::after {
-    content: "✧  ♥  ✦  ♥  ✧";
-    position: fixed;
-    bottom: 8%;
-    right: 5%;
-    color: rgba(214, 90, 145, 0.25);
-    font-size: 30px;
-    letter-spacing: 15px;
-    pointer-events: none;
+.music-controls select {
+    padding: 10px;
+    border: 1px solid #ff70a6;
+    border-radius: 20px;
+    font-size: 15px;
+    margin: 5px;
+    background: white;
+    color: #555;
 }
 
-.birthday-card {
-    position: relative;
-    z-index: 1;
-}
-
-button:hover {
-    box-shadow: 0 8px 20px rgba(214, 90, 145, 0.3);
+.music-controls button {
+    margin: 5px;
 }
